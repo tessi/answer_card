@@ -1,0 +1,7 @@
+= simple_form_for resource, url: update_card_path(uuid: resource.uuid) do |f|
+  = f.input :can_come, as: :radio_buttons
+  = f.input :need_room, as: :radio_buttons
+  = f.input :room_start_date
+  = f.input :room_end_date
+  = f.input :notes
+  = f.button :submit, 'Antwortkarte abschicken!', class: 'submit_card'

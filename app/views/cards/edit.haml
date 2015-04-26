@@ -1,0 +1,25 @@
+.flashes
+  - flash.each do |type, value|
+    .flash{ :class => type.to_s }
+      = value
+
+#centering
+  #content
+    .box
+      #right_postcard_half
+        %img{src: image_path('Logo_Hochzeit_transparent.png')}
+        .bottom
+          %p{id: 'line1'}
+            Josi und Tessi
+          %p{id: 'line2'}
+            %a{href: 'mailto:hochzeit@tessenow.org'}
+              hochzeit@tessenow.org
+          %p{id: 'line3'}
+            &nbsp;
+          %p{id: 'line4'}
+            &nbsp;
+      #left_postcard_half
+        %h1
+          Antwortkarte von
+          = resource.name
+        = render partial: 'form'

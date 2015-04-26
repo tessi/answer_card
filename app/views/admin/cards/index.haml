@@ -1,0 +1,47 @@
+.actions
+  .action.create_new
+    %p Erstelle eine neue Karte:
+    = simple_form_for [:admin, Card.new] do |f|
+      = f.input :name
+      = f.button :submit, 'Los!'
+
+- if @cards.empty?
+  %p Noch haben wir keine Karten, erstelle eine!
+- else
+  %table
+    %tr
+      %th
+        Name
+      %th
+        Kommt
+      %th
+        Anzahl Personen
+      %th
+        Übernachtet?
+      %th
+        Übernachten von
+      %th
+        Übernachten bis
+      %th
+        Bemerkungen
+      %th
+        Link
+      %th
+        Actionen
+    - @cards.each do |card|
+      %tr.card
+        %td.card--name= card.name
+        %td.card--can_come
+          - if !card.can_come.nil?
+            = card.can_come? ? 'ja' : 'nein'
+        %td.card--people_count= card.people_count
+        %td.card--need_room
+          - if !card.need_room.nil?
+            = card.need_room? ? 'ja' : 'nein'
+        %td.card--room_start_date= card.room_start_date
+        %td.card--room_end_date= card.room_end_date
+        %td.card--notes= card.notes
+        %td.card--link
+          = link_to 'Link', card_path(uuid: card.uuid)
+        %td.card--actions
+          = button_to 'Löschen', admin_card_path(card), method: 'delete', data: { confirm: 'Echt jetzt?', disable_with: 'lösche viele Dinge...' }
