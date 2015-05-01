@@ -18,6 +18,8 @@ gem 'has_defaults'
 gem 'inherited_resources'
 gem 'simple_form'
 
+gem 'rollbar', '~> 1.5.1'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
