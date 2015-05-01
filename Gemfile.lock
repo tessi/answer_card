@@ -62,8 +62,6 @@ GEM
       capistrano-bundler (~> 1.1)
     capistrano-rails-console (0.5.2)
       capistrano (>= 3.0.0, < 4.0.0)
-    capistrano-secret (1.0.1)
-      capistrano (~> 3)
     capybara (2.4.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -340,7 +338,6 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails (~> 1.1)
   capistrano-rails-console
-  capistrano-secret
   capybara
   coffee-rails (~> 4.1.0)
   cucumber-rails

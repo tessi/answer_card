@@ -16,7 +16,17 @@ set :scm, :git
 set :ssh_options, { :forward_agent => true }
 set :pty, true
 
-set :rollbar_token, "#{secret('rollbar.token')}"
+
+require 'json'
+secret = {}
+secret_file = "config/secret/#{fetch(:stage)}.json"
+if (File.exists? secret_file)
+  File.open( secret_file, "r" ) do |f|
+    secret = JSON.load( f )
+  end
+end
+
+set :rollbar_token, "#{secret['rollbar']['token']}"
 set :rollbar_env, Proc.new { fetch :stage }
 set :rollbar_role, Proc.new { :app }
 
