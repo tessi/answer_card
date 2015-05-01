@@ -4,8 +4,8 @@
 
 @font-face
   font-family: "CompatilFactLTW02"
-  src: url(/css/compatil.eot?#iefix)
-  src: url(/css/compatil.eot?#iefix) format("eot"), url(/css/compatil.woff) format("woff"), url(/css/compatil.ttf) format("truetype"), url(/css/compatil.svg) format("svg")
+  src: url(asset-path('compatil.eot?#iefix'))
+  src: url(asset-path('compatil.eot?#iefix')) format("eot"), url(asset-path('compatil.woff')) format("woff"), url(asset-path('compatil.ttf')) format("truetype"), url(asset-path('compatil.svg')) format("svg")
 
 .flashes
   position: absolute
@@ -79,6 +79,24 @@ a
     margin-top: 0px
     padding-top: 20px
     margin-left: 5px
+
+.simple_form.edit_card
+  text-align: left
+
+  .input
+    margin: 5px
+    label
+      margin-right: 5px
+    textarea
+      display: block
+      width: 100%
+      height: 3em
+    label.date
+      display: inline-block
+      width: 2em
+  input.submit_card
+    margin: 5px
+    margin-top: 20px
 
 #right_postcard_half
   float: right
