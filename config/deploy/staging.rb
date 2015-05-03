@@ -8,8 +8,5 @@ server 'mirfac.uberspace.de',
          auth_methods: %w(publickey)
        }
 
+set :domain, 'antwort.hochzeit.tessenow.com'
 set :user, 'test8'
-set :branch, :master
-set :domain, 'antwort.hochzeit.tessenow.org'
-set :log_level, :debug
-set :state, :staging

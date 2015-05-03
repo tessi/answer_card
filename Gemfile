@@ -24,14 +24,15 @@ gem 'rollbar', '~> 1.5.1'
 gem 'passenger'
 
 group :development do
-  gem 'capistrano',       '~> 3.1'
-  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano',       '~> 3.4'
+  gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano-rails-console'
+  gem 'capistrano-uberspace', path: '../../capistrano-uberspace'
 end
 
 group :production do
-  gem 'mysql2'
+  gem 'pg'
 end
 
 group :development, :test do
