@@ -31,10 +31,6 @@ group :development do
   # gem 'capistrano-uberspace', path: '../../capistrano-uberspace'
 end
 
-group :production do
-  gem 'pg'
-end
-
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
