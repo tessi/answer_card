@@ -5,6 +5,16 @@ GIT
     validates_lengths_from_database (0.4.0)
       activerecord (>= 2.3.2)
 
+GIT
+  remote: git://github.com/tessi/capistrano-uberspace.git
+  revision: 6eaa7bd919a63af7af69f5d9312414f7817f907e
+  specs:
+    capistrano-uberspace (1.0.0)
+      capistrano (~> 3.4.0)
+      capistrano-rails
+      passenger (~> 5.0)
+      rack (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -171,6 +181,7 @@ GEM
     passenger (5.0.7)
       rack
       rake (>= 0.8.1)
+    pg (0.18.1)
     poltergeist (1.6.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -337,6 +348,7 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails
   capistrano-rails-console
+  capistrano-uberspace!
   capybara
   coffee-rails (~> 4.1.0)
   cucumber-rails
@@ -352,6 +364,7 @@ DEPENDENCIES
   launchy
   letter_opener
   passenger
+  pg
   poltergeist
   pry-byebug
   pry-rails

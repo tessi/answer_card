@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.1'
 gem 'rails-i18n'
-gem 'sqlite3'
 
 gem 'sass-rails', '~> 5.0'
 gem 'haml-rails'
@@ -23,15 +22,21 @@ gem 'rollbar', '~> 1.5.1'
 # deployment
 gem 'passenger'
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem 'capistrano',       '~> 3.4'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano-rails-console'
-  # gem 'capistrano-uberspace', path: '../../capistrano-uberspace'
+  gem 'capistrano-uberspace', github: 'tessi/capistrano-uberspace'
 end
 
 group :development, :test do
+  gem 'sqlite3'
+
   gem 'byebug'
   gem 'web-console', '~> 2.0'
 

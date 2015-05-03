@@ -11,5 +11,3 @@ server 'hercules.uberspace.de',
 set :user, 'hz'
 set :branch, :production
 set :domain, 'antwort.hochzeit.tessenow.org'
-set :log_level, :debug
-set :state, :production
