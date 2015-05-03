@@ -28,7 +28,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano-rails-console'
-  gem 'capistrano-uberspace', path: '../../capistrano-uberspace'
+  # gem 'capistrano-uberspace', path: '../../capistrano-uberspace'
 end
 
 group :production do
