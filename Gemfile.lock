@@ -7,10 +7,11 @@ GIT
 
 GIT
   remote: git://github.com/tessi/capistrano-uberspace.git
-  revision: 6eaa7bd919a63af7af69f5d9312414f7817f907e
+  revision: e43c8376404dff9e582e5e477dd04a016d741441
   specs:
     capistrano-uberspace (1.0.0)
       capistrano (~> 3.4.0)
+      capistrano-bundler
       capistrano-rails
       passenger (~> 5.0)
       rack (~> 1.4)
