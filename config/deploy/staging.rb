@@ -1,5 +1,5 @@
 server 'mirfac.uberspace.de',
-       user: 'test8',
+       user: 'test22',
        roles: [:app, :web, :cron, :db],
        primary: true,
        ssh_options: {
@@ -9,4 +9,4 @@ server 'mirfac.uberspace.de',
        }
 
 set :domain, 'antwort.hochzeit.tessenow.com'
-set :user, 'test8'
+set :user, 'test22'
